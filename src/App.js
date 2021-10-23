@@ -10,10 +10,10 @@ function App() {
 
   return (
     <div className={darkTheme ? 'dark' : ''}>
-      <div className="bg-gray-100 dark:bg-gray-900 text-blue-400 min-h-screen">
+      <div className="bg-white dark:bg-gray-900 text-blue-400 min-h-screen">
         < Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-        < Footer />
         < Routes />
+        < Footer />
       </div>
     </div>
   );
