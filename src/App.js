@@ -1,15 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+
+import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
+import { Routes } from './components/Routes'
 
 function App() {
+
+  const [ darkTheme, setDarkTheme ] = useState(false)
+
   return (
-    <div className="App">
-      <h1>
-        Test react app
-      </h1>
-      <h2>
-        TEst react app but h2
-      </h2>
+    <div className={darkTheme ? 'dark' : ''}>
+      <div className="bg-gray-100 dark:bg-gray-900 text-blue-400 min-h-screen">
+        < Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+        < Footer />
+        < Routes />
+      </div>
     </div>
   );
 }
