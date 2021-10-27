@@ -23,7 +23,7 @@ export const Results = () => {
     if(isLoading) return <Loading />;
 
     switch (location.pathname) {
-        case '/google-rip':
+        case '/google-rip/':
             return(
                 <div className='flex justify-center align-middle flex-col'>
                     <h1 className='text-xl md:text-7xl text-black dark:text-white mx-2 my-5 text-center'>Yan's personal google clone</h1>

@@ -10,6 +10,9 @@ export const Routes = () => {
       <Route exact path="/">
         <Redirect to="/search" />
       </Route>
+      <Route exact path="/google-rip/">
+        <Results />
+      </Route>
       <Route exact path="/search">
         <Results />
       </Route>
