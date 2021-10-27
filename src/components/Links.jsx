@@ -7,7 +7,7 @@ const links = [
     { url: '/news', text: '📰 News' },
     { url: '/images', text: '📸 Images' },
     { url: '/videos', text: '📺 Videos' },
-    { url: '/google-rip/', text: '🏠 Home'}
+        { url: '/google-rip/', text: '🏠 Home'}
 ];
 
 export const Links = () => {

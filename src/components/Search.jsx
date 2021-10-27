@@ -24,7 +24,7 @@ export const Search = ({text, setText}) => {
             {text && (
                 <button 
                     type='button' 
-                    className='absolute top-1.5 right-4 text-2xl text-gray-500' 
+                    className='absolute top-1.5 right-20 text-2xl text-gray-500' 
                     onClick={() => setText('')} >
                     X
                 </button>
