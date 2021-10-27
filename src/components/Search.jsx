@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDebounce } from 'use-debounce'
 import { Links } from './Links'
 import { useResultContext } from '../contexts/ResultContextProvider'
  
-export const Search = () => {
-    const [text, setText] = useState('');
+export const Search = ({text, setText}) => {
     const { setSearchTerm } = useResultContext();
     const [debouncedValue] = useDebounce(text, 1000);
 
@@ -20,6 +19,7 @@ export const Search = () => {
                 className='w-80 h-10 border rounded-full shadow-sm outline-none p-6 text-black dark:bg-gray-200 hover:shadow-lg' 
                 placeholder='Search here, bro'
                 onChange={(e) => setText(e.target.value)}
+                id='TextInput'
             />
             {text && (
                 <button 

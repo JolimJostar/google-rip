@@ -16,19 +16,13 @@ export const ResultContextProvider = ( { children } ) => {
             headers: {
                 'x-user-agent': 'desktop',
                 'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-                'x-rapidapi-key': '23f6545f22msh416ddfe9cd9a41ep1cbff4jsn07628abf7be6'
+                'x-rapidapi-key': process.env.REACT_APP_API_KEY
             }
         })
 
         const data = await response.json();
 
-        if(type.includes('/news')) {
-            setResults(data.entries);
-        } else if (type.includes('/images')) {
-            setResults(data.image_results)
-        } else {
-            setResults(data.results)
-        }
+        setResults(data);
 
         setIsLoading(false)
     }
