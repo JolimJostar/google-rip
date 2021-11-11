@@ -1,6 +1,6 @@
 # Google clone
 
-Made this WPA using React.js, tailwind css and RapidApi
+Made (this site)[https://jolimjostar.github.io/google-rip/] using React.js, tailwind css and RapidApi
 
 # How to use
 
