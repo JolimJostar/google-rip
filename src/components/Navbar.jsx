@@ -12,7 +12,7 @@ export const Navbar = ({darkTheme, setDarkTheme}) => {
                 <Link to="/search">
                     <button
                         className="text-2xl bg-blue-500 font-bold text-white py-1 px-2 rounded dark:bg-gray-500" >
-                        Google 🔍
+                        Янугл 🔍
                     </button>
                 </Link>
                 <button type="button" className="text-xl bg-white border rounded-full px-2 py-1 dark:bg-gray-50 dark:text-gray-900 hover:shadow-lg" onClick={() => setDarkTheme(!darkTheme)}>

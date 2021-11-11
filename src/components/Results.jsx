@@ -13,6 +13,8 @@ export const Results = () => {
         if (searchTerm !== '') {
           if (location.pathname === '/videos') {
             getResults(`/search/q=${searchTerm} videos`);
+          } else if (location.pathname === '/google-rip/'){
+            return undefined
           } else {
             getResults(`${location.pathname}/q=${searchTerm}&num=40`);
           }
@@ -23,6 +25,13 @@ export const Results = () => {
     if(isLoading) return <Loading />;
 
     switch (location.pathname) {
+        case '/google-rip':
+            return(
+                <div className='flex justify-center align-middle flex-col'>
+                    <h1 className='text-xl md:text-7xl text-black dark:text-white mx-2 my-5 text-center'>Персональный поисковик Яна</h1>
+                    <p className='text-sm md:text-3xl text-center text-gray-800 dark:text-gray-300'>Введи что-то и нажми кнопку "Янугл"</p>
+                </div>
+            );
         case '/search':
             return (
                 <div className='justify-between gap-10 sm:px-24 grid grid-cols-1'>

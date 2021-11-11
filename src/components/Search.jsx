@@ -17,7 +17,7 @@ export const Search = ({text, setText}) => {
                 value={text} 
                 type='text' 
                 className='w-80 h-10 border rounded-full shadow-sm outline-none p-6 text-black dark:bg-gray-200 hover:shadow-lg' 
-                placeholder='Search here, bro'
+                placeholder='Вводи сюда! :)'
                 onChange={(e) => setText(e.target.value)}
                 id='TextInput'
             />
