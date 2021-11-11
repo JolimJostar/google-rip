@@ -5,7 +5,7 @@ import { useResultContext } from '../contexts/ResultContextProvider'
  
 export const Search = ({text, setText}) => {
     const { setSearchTerm } = useResultContext();
-    const [debouncedValue] = useDebounce(text, 1000);
+    const [debouncedValue] = useDebounce(text, 600);
 
     useEffect(() => {
         if (debouncedValue) setSearchTerm(debouncedValue)
@@ -24,7 +24,7 @@ export const Search = ({text, setText}) => {
             {text && (
                 <button 
                     type='button' 
-                    className='absolute top-1.5 right-20 text-2xl text-gray-500' 
+                    className='absolute top-1.5 right-4 text-2xl text-gray-500' 
                     onClick={() => setText('')} >
                     X
                 </button>

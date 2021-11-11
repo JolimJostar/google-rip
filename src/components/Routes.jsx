@@ -7,11 +7,11 @@ export const Routes = () => {
     return (
         <div className="p-4">
             <Switch>
-      <Route exact path="/">
+      <Route exact path="/google-rip">
         <Redirect to="/search" />
       </Route>
-      <Route exact path="/google-rip/">
-        <Results />
+      <Route exact path="/">
+        <Redirect to="/search" />
       </Route>
       <Route exact path="/search">
         <Results />
